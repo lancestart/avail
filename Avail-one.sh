@@ -140,9 +140,7 @@ function check_walletold() {
 }
 # 重启服务
 function reload() {
-   sudo systemctl daemon-reload
-   sudo systemctl enable availd
-   sudo systemctl start availd.service
+    sudo systemctl restart availd.service
 }
 
 # 主菜单
@@ -155,7 +153,7 @@ function main_menu() {
         echo "1. 安装节点"
         echo "2. 查看Avail服务状态"
         echo "3. 节点日志查询"
-        echo "4. 查询节点匹配的public key"
+        echo "4. 查询节点机器的public key"
         echo "5. 重启Avail服务"
         echo "6. 设置快捷键的功能"
         read -p "请输入选项（1-5）: " OPTION
